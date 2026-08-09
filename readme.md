@@ -28,7 +28,7 @@
         |                        [CTS (10)]  [Releu Protecție (19)]     [INVERTOR SECUNDAR] 
         |                                               |                        |
         |      [Prioritate B]←--------------------------+                        |
-        |      [ TS: BYPASS MANUAL (24) ]                                       |
+        |      [ TS: BYPASS MANUAL (24) ]                                        |
         +-----→[Prioritate A]        |                                           |
         +----------------------------+                                           |
         |                            |                                           |
@@ -36,7 +36,7 @@
     [ RCB 12 ]             [ Releu protectie 14 ]  [ ATS: Suplimentare Putere AC (13)]
         |                            |        +--->[Prioritate B]    | 
         |                            v        |                      v 
-        |                        [ MCB 20 ]---+            [Releu Protecție 11]
+        |                       [ RCBO 20 ]---+            [Releu Protecție 11]
         |                            |                               |
         v                            v                               v
 [FĂRĂ Releu Protecție AC]  [Restul consumatorilor]           [ MCB 4 și MCB 8]
