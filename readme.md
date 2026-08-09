@@ -49,13 +49,15 @@
                              LOGICĂ ȘI CONTROL
 ================================================================================================
  [ SERVER HA (Proxmox VE) ] +-----> - Calculează Prognoza Iradiere Solara(in kWh) ptr. ziua urmat.
-     (cu UPS propriu)       |         și setează Prag SOC Dinamic. Nu descarcă
+     (cu UPS propriu)       |         și setează Prag SOC pentru Bypass Retea Dinamic. Nu descarcă
        ^         ^          |         bateria dacă mâine nu se va recupera 
        |         |          |         ce s-ar fi descărcat în mod normal.
        |         |          +-----> - UPS implicit pentru întreaga casă: 
-       |         |                     - Lipsa severă de iluminare solară coincide 
-       |         |                       des cu o pană de curent. Bateria nu e descarcata din 
-       |         |                       raționamentul de mai sus.
+       |         |                    - Lipsa severă de iluminare solară coincide 
+       |         |                      des cu o pană de curent. Bateria nu e descarcata din 
+       |         |                      raționamentul de mai sus.
+       |         |                    - Se mentine un prag critic (legat de pragul dinamic) unde 
+       |         |                      se va "completa" cu incarcare din Retea.
        |         +----------x?----> - Conexiune nefuncțională la Internet 
        |                              NU duce la funcționare statică (autonomie prognoză 7 zile).
        x?-------------------+-----> - Funcționare statică, în cazul în care serverul
@@ -63,12 +65,10 @@
        |                    +-----> - CTS nealimentat/nefuncțional: invertorul degradeaza
        |                              la funcționare „din fabrică”, o data schimbat pe
        |                              mod SOLAR din ecran sau HA. Consum aferent rețea 30W 24h/7.
-       |
     [ CONTROLER TRANSFER și SINCRONIZARE (CTS) ]-----------------------------------+
        ^               |                                                           |
        |               v                                                           v
   Smartshunt  Contactor Rețea(23)    Buton Comutator Invertor Suplimentar <--- Releu izolat
-
 ================================================================================================
-                                                                                 08.08.2026 v1.0
+                                                                                 09.08.2026 v1.1
 ```
