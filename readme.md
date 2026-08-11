@@ -57,7 +57,7 @@
        |         |                      des cu o pană de curent. Bateria nu e descarcata din 
        |         |                      raționamentul de mai sus.
        |         |                    - Se mentine un prag critic (legat de pragul dinamic) unde 
-       |         |                      se va "completa" cu incarcare din Retea.
+       |         |         WAN         se va "completa" cu incarcare din Retea.
        |         +----------x?----> - Conexiune nefuncțională la Internet 
        |                              NU duce la funcționare statică (autonomie prognoză 7 zile).
        x?-------------------+-----> - Funcționare statică, în cazul în care serverul
