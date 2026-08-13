@@ -2,13 +2,13 @@
 ```text
 ================================================================================================
    ARHITECTURA SISTEM ENERGETIC CU FUNCȚIONARE ÎN REGIM DE INSULARIZARE
-================================================================================================
-[ REȚEA NAȚIONALĂ ]       [ PANOURI VEST: 5.2 kW ]      [ PANOURI SUD: 5.5 kW ]
-+________|                  (Înclinație 7 grade)           (Înclinație 30 grade)
-|                                     |                                |
-+__./.___->[ INVERTOR PRINCIPAL ] <---+       [ INVERTOR SECUNDAR ]<---+
-    ^  (Rețea Conectat   Deconectat)             Pornit        Oprit
-    |            x            ^                    ^             x
+===============================================================================================
+[ REȚEA NAȚIONALĂ 25A]                 [ PANOURI VEST: 5.2 kW ]         [ PANOURI SUD: 5.5 kW ]
++___|            +--->[ CONSUMATORI ]      |                                |
+|                |                         |                                |
++__./.___->[ INVERTOR PRINCIPAL ] <--------+    [ INVERTOR SECUNDAR ]<------+
+    ^  (Rețea Conectat   Deconectat)             Oprit         Pornit-->[ CONSUMATORI COMUTAȚI ]
+    |            x            ^                    x             ^
   NC(23)         |    sau     |                    |     sau     |
     |            v            v                    v             v
     |           ===================================================
@@ -70,5 +70,5 @@
        |               v                                                           v
   Smartshunt  Contactor Rețea(23)    Buton Comutator Invertor Suplimentar <--- Releu izolat
 ================================================================================================
-                                                                                 09.08.2026 v1.1
+                                                                                 13.08.2026 v1.2
 ```
